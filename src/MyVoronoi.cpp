@@ -48,6 +48,26 @@ void MyVoronoi::addCornerPoints(const MXd& pointCloud, const double& scale)
     m_sites.emplace_back(Point(maxX, minY, maxZ));
     m_sites.emplace_back(Point(maxX, maxY, minZ));
     m_sites.emplace_back(Point(maxX, maxY, maxZ));
+
+    m_sites.emplace_back(Point(middleX, minY, minZ));
+    m_sites.emplace_back(Point(middleX, minY, maxZ));
+    m_sites.emplace_back(Point(middleX, maxY, minZ));
+    m_sites.emplace_back(Point(middleX, maxY, maxZ));
+    m_sites.emplace_back(Point(minX, middleY, minZ));
+    m_sites.emplace_back(Point(minX, middleY, maxZ));
+    m_sites.emplace_back(Point(maxX, middleY, minZ));
+    m_sites.emplace_back(Point(maxX, middleY, maxZ));
+    m_sites.emplace_back(Point(minX, minY, middleZ));
+    m_sites.emplace_back(Point(minX, maxY, middleZ));
+    m_sites.emplace_back(Point(maxX, minY, middleZ));
+    m_sites.emplace_back(Point(maxX, maxY, middleZ));
+
+    m_sites.emplace_back(Point(middleX, middleY, minZ));
+    m_sites.emplace_back(Point(middleX, middleY, maxZ));
+    m_sites.emplace_back(Point(minX, middleY, middleZ));
+    m_sites.emplace_back(Point(maxX, middleY, middleZ));
+    m_sites.emplace_back(Point(middleX, minY, middleZ));
+    m_sites.emplace_back(Point(middleX, maxY, middleZ));
 }
 
 void MyVoronoi::setBoundingBox(const MXd& pointCloud, const double& scale)
