@@ -40,6 +40,10 @@ void MyVoronoi::addCornerPoints(const MXd& pointCloud, const double& scale)
     double maxY = maxP.y() + length;
     double maxZ = maxP.z() + length;
 
+    double middleX = 0.5 * (minX + maxX);
+    double middleY = 0.5 * (minY + maxY);
+    double middleZ = 0.5 * (minZ + maxZ);
+
     m_sites.emplace_back(Point(minX, minY, minZ));
     m_sites.emplace_back(Point(minX, minY, maxZ));
     m_sites.emplace_back(Point(minX, maxY, minZ));
